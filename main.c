@@ -36,8 +36,7 @@ double taylor_log(double x, unsigned int n)
         double xn = 1.0;
         for (unsigned int i = 1; i <= n; i++){
             xn = xn * y;
-            y = xn;
-            vysledok += y / i;
+            vysledok += xn / i;
         }
     }
     return vysledok;
