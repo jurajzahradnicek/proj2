@@ -89,10 +89,10 @@ double taylor_pow(double x, double y, unsigned int n)                        //f
     double ln = taylor_log(x, n);                                            //volanie funkcie taylor_log
     double fact = 1.0;
 
-    for(unsigned int i = 1; i<=n; i++)
+    for(unsigned int i = 1; i<n; i++)
     {
-        fact *= i;
-        yn *=y;
+        fact *=i;
+        yn *= y;
         vysledok += (yn*ln) / fact;
         ln *= taylor_log(x, n);
     }
@@ -106,7 +106,7 @@ double taylorcf_pow(double x, double y, unsigned int n)                     //fu
     double ln = cfrac_log(x,n);                                             //volanie funkcie cfrac_log
     double fact = 1.0;
 
-    for(unsigned int i = 1; i<=n; i++)
+    for(unsigned int i = 1; i<n; i++)
     {
         fact *= i;
         yn *= y;
